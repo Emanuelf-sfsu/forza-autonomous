@@ -16,5 +16,7 @@ steer:
 	gcc -D USE_DEV_LIB  -c  lib/PCA9685/PCA9685.c -o bin/PCA9685.o  -I ./lib/Config
 	gcc -D USE_DEV_LIB  ./bin/steering.o ./bin/DEV_Config.o ./bin/dev_hardware_i2c.o ./bin/sysfs_gpio.o ./bin/motor_contr.o ./bin/PCA9685.o -o steer  -lm
 
+threading:
+	gcc -o examples/threading.c -lpigpio -lrt -pthread
 clean:
 	rm *.o
