@@ -65,7 +65,8 @@ int main(){
 	printf("Turn Right");
 	motor_run(0,100,1);
 	sleep(3);
-
+	
+	motor_run(0,0,1);
 	// /*
 	//  * Run for 2 Seconds
 	//  */
